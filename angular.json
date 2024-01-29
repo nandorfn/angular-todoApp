@@ -5,8 +5,11 @@
   "projects": {
     "todo-app": {
       "projectType": "application",
-      "schematics": {},
-      "root": "",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -25,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -84,12 +87,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
