@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ITodo } from '../../../core/models/todo.model';
 
+export type ITodoType = 'OPEN' | 'PROGRESS' | 'TESTING' | 'DONE';
+export type ITodoStatus = ['OPEN', 'PROGRESS', 'TESTING', 'DONE']
 @Component({
   selector: 'app-todo-card',
   standalone: true,
@@ -8,5 +11,6 @@ import { Component } from '@angular/core';
   styleUrl: './todo-card.component.css'
 })
 export class TodoCardComponent {
-
+  @Input() type: ITodoType = 'OPEN';
+  @Input() todo!: ITodo;
 }
